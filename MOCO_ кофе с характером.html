@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MOCO: кофе с характером</title>
+<meta name="description" content="MOCO: specialty-кофе, спокойная атмосфера и внимание к деталям. Меню, кофейни и контакты.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{box-sizing:border-box;color-scheme:light;--milk:#f6f1e8;--cream:#ece3d3;--esp:#1f1612;--brn:#5b3d2b;--car:#b88a5a;--tx:#1f1612;--mu:#7a6a5c;--ln:#d8ccb9;--e:cubic-bezier(.2,.7,.2,1);padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--milk);color:var(--tx);font:16px/1.6 Inter,system-ui,sans-serif;overflow-x:hidden}
+.f{font-family:Fraunces,Georgia,serif;font-weight:400;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--car);outline-offset:3px}
+.w{max-width:1200px;margin:0 auto;padding:0 24px}
+/* header */
+header{position:fixed;left:0;right:0;top:env(safe-area-inset-top,0px);z-index:50;color:var(--milk)}
+header::before{content:"";position:absolute;inset:0;background:var(--milk);opacity:0;transition:opacity .5s var(--e);border-bottom:1px solid var(--ln)}
+header.s{color:var(--tx)}header.s::before{opacity:1}
+.hb{position:relative;display:flex;justify-content:space-between;align-items:center;height:72px}
+.lg{font:600 26px Fraunces,Georgia,serif;letter-spacing:.06em}
+nav{display:flex;gap:30px;align-items:center;font-size:14px}
+nav a{position:relative;padding:4px 0}
+nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .5s var(--e)}
+nav a:hover::after{transform:scaleX(1)}
+.btn{display:inline-block;padding:13px 26px;border:1px solid currentColor;border-radius:99px;font-size:14px;font-weight:500;transition:transform .35s var(--e)}
+.btn:hover{transform:translateY(-2px)}.btn:active{transform:scale(.97)}
+.btn.fill{background:var(--milk);color:var(--esp);border-color:var(--milk)}
+.bg{display:none;background:none;border:0;color:inherit;font:500 14px Inter,sans-serif;cursor:pointer;padding:8px 0}
+/* hero */
+.hero{position:relative;min-height:100vh;min-height:100svh;background:var(--esp);color:var(--milk);overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end}
+.cup{position:absolute;right:3vw;top:10vh;width:min(36vw,430px);aspect-ratio:1;will-change:transform}
+.cup i{position:absolute;border-radius:50%;display:block}
+.cup .a{inset:0;background:#2b1f19}.cup .b{inset:7%;background:#e8dfd0}.cup .c{inset:17%;background:#f6f1e8}.cup .d{inset:23%;background:#4a3123}.cup .e{inset:27%;background:#7a4f33}.cup .g{left:66%;top:44%;width:44%;height:12%;border-radius:12px;background:#e8dfd0;z-index:-1}
+.cup small{position:absolute;left:0;right:0;bottom:-34px;text-align:center;font-size:12px;color:var(--mu)}
+.hi{position:relative;padding:0 24px 28px;max-width:1200px;width:100%;margin:0 auto}
+.tag{font-size:clamp(18px,2.4vw,26px);max-width:15em;margin-bottom:24px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px}
+.big{display:flex;font:600 clamp(110px,26vw,360px)/.78 Fraunces,Georgia,serif;letter-spacing:-.05em;margin-left:-.04em}
+.big span{display:block;overflow:hidden;padding-bottom:.08em}.big b{display:block;font-weight:600;transform:translateY(105%);animation:up 1.1s var(--e) forwards}
+@keyframes up{to{transform:none}}
+.in1{opacity:0;transform:translateY(18px);animation:fadeup .9s var(--e) forwards}
+@keyframes fadeup{to{opacity:1;transform:none}}
+/* sections */
+section{padding:120px 0}
+.k{font-size:13px;color:var(--mu);margin-bottom:18px}
+h2{font:400 clamp(40px,7vw,96px)/.98 Fraunces,Georgia,serif;letter-spacing:-.03em}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s var(--e),transform .9s var(--e);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+.ph{position:relative;overflow:hidden;background:var(--c,#cdbba5)}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph::after{content:"";position:absolute;inset:0;background:var(--bgc,var(--milk));transform-origin:top;transition:transform 1.2s var(--e);transition-delay:var(--d,0s);z-index:2}
+.ph.in::after{transform:scaleY(0)}
+.ph span{position:absolute;left:14px;bottom:12px;font-size:12px;color:rgba(31,22,18,.6)}
+.ph .z{position:absolute;inset:0;transition:transform 1.2s var(--e)}
+.ph:hover .z{transform:scale(1.04)}
+/* story */
+.st{display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:end;margin-top:56px}
+.st p{color:var(--mu);max-width:26em}
+.sp{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:20px;margin-top:64px}
+.sp .ph:nth-child(1){aspect-ratio:4/5}.sp .ph:nth-child(2){aspect-ratio:3/4;margin-top:60px}.sp .ph:nth-child(3){aspect-ratio:3/4;margin-top:20px}
+/* menu */
+.mn{background:var(--cream)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:40px 0 44px}
+.tabs button{font:500 14px Inter,sans-serif;border:1px solid var(--tx);background:none;color:var(--tx);padding:10px 20px;border-radius:99px;cursor:pointer;transition:transform .3s var(--e)}
+.tabs button:hover{transform:translateY(-2px)}
+.tabs button[aria-selected=true]{background:var(--esp);color:var(--milk)}
+.mg{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:56px;align-items:start}
+.mg .ph{aspect-ratio:4/5;position:sticky;top:96px}
+.it{display:flex;justify-content:space-between;gap:20px;padding:20px 0;border-bottom:1px solid var(--ln);transition:transform .5s var(--e)}
+.it:hover{transform:translateX(8px)}
+.it h3{font:400 26px/1.1 Fraunces,Georgia,serif;margin-bottom:4px}
+.it p{font-size:14px;color:var(--mu)}.it b{font-weight:500;white-space:nowrap}
+.dm{font-size:13px;color:var(--mu);margin-top:20px}
+.lst{opacity:1;transition:opacity .35s var(--e)}.lst.o{opacity:0}
+/* gallery */
+.gl{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:120px;gap:16px;margin-top:56px}
+.gl .ph:nth-child(1){grid-column:span 5;grid-row:span 4}.gl .ph:nth-child(2){grid-column:span 4;grid-row:span 2}.gl .ph:nth-child(3){grid-column:span 3;grid-row:span 3}
+.gl .ph:nth-child(4){grid-column:span 4;grid-row:span 2}.gl .ph:nth-child(5){grid-column:span 3;grid-row:span 3}.gl .ph:nth-child(6){grid-column:span 9;grid-row:span 2}
+/* locations */
+.lc{margin-top:48px;border-top:1px solid var(--tx)}
+.lr{display:grid;grid-template-columns:1.1fr 1.4fr 1.2fr 1fr auto;gap:20px;align-items:center;padding:28px 0;border-bottom:1px solid var(--ln);transition:transform .5s var(--e)}
+.lr:hover{transform:translateX(8px)}
+.lr h3{font:400 28px Fraunces,Georgia,serif}.lr span{color:var(--mu);font-size:15px}
+.lr a{font-size:14px;font-weight:500;border-bottom:1px solid currentColor}
+/* footer */
+footer{background:var(--esp);color:var(--milk);padding:90px 0 36px}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h4{font:500 13px Inter,sans-serif;color:var(--mu);margin-bottom:14px}
+footer li{list-style:none;margin-bottom:8px;font-size:15px}
+.fb{font:600 clamp(80px,22vw,300px)/.8 Fraunces,Georgia,serif;letter-spacing:-.05em;margin:70px 0 28px}
+.cp{font-size:13px;color:var(--mu);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:860px){
+ nav{display:none;position:absolute;left:0;right:0;top:72px;background:var(--milk);color:var(--tx);flex-direction:column;align-items:flex-start;padding:20px 24px 28px;gap:16px;border-bottom:1px solid var(--ln)}
+ nav.o{display:flex}.bg{display:block}
+ section{padding:80px 0}
+ .cup{width:86vw;right:-22vw;top:11vh}
+ .st,.mg{grid-template-columns:1fr;gap:32px}.mg .ph{position:relative;top:0;aspect-ratio:4/3}
+ .sp{grid-template-columns:1fr 1fr}.sp .ph:nth-child(1){grid-column:span 2;aspect-ratio:4/3}.sp .ph:nth-child(2),.sp .ph:nth-child(3){margin-top:0}
+ .gl{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}.gl .ph:nth-child(n){grid-column:span 1;grid-row:span 2}.gl .ph:nth-child(1),.gl .ph:nth-child(6){grid-column:span 2}
+ .lr{grid-template-columns:1fr;gap:6px}.fg{grid-template-columns:1fr 1fr}.fg>div:first-child{grid-column:span 2}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}
+ .big b,.in1,.rv{opacity:1;transform:none}.ph::after{display:none}
+}
+</style></head><body>
+<header id="hd"><div class="w hb"><a href="#top" class="lg" aria-label="MOCO, на главную">MOCO</a>
+<nav id="nv" aria-label="Основная навигация"><a href="#menu">Меню</a><a href="#about">О нас</a><a href="#shops">Наши кофейни</a><a href="#contacts">Контакты</a></nav>
+<a class="btn" href="#menu" style="padding:9px 20px">Заказать</a><button class="bg" id="bg" aria-expanded="false">Меню</button></div></header>
+
+<main id="top">
+<div class="hero"><div class="cup" id="cup" role="img" aria-label="Место под фотографию: чашка кофе сверху. Замените на реальное фото MOCO"><i class="a"></i><i class="b"></i><i class="c"></i><i class="d"></i><i class="e"></i></div>
+<div class="hi"><p class="tag f in1" style="animation-delay:.9s">Specialty-кофе для городского ритма</p>
+<div class="ctas in1" style="animation-delay:1.1s"><a class="btn fill" href="#menu">Смотреть меню</a><a class="btn" href="#shops">Наши кофейни</a></div>
+<h1 class="big" aria-label="MOCO" id="big"></h1></div></div>
+
+<section id="about"><div class="w"><p class="k rv">О нас</p>
+<h2 class="rv" style="--d:.1s">Кофе с характером<br>и спокойной атмосферой</h2>
+<div class="st"><p class="rv" style="--d:.2s">MOCO делает кофе для тех, кто ценит вкус и внимание к деталям. Здесь будет история бренда, когда появятся официальные тексты.</p>
+<p class="rv" style="--d:.3s">Минимализм, чистая подача и напитки, которые хочется допить до конца.</p></div>
+<div class="sp"><figure class="ph rv" style="--c:#b89b7c" role="img" aria-label="Место под фото: приготовление кофе"><div class="z"></div><span>приготовление</span></figure>
+<figure class="ph rv" style="--c:#8a6a52;--d:.12s" role="img" aria-label="Место под фото: интерьер"><div class="z"></div><span>интерьер</span></figure>
+<figure class="ph rv" style="--c:#d2c1a8;--d:.24s" role="img" aria-label="Место под фото: детали"><div class="z"></div><span>детали</span></figure></div></div></section>
+
+<section class="mn" id="menu"><div class="w"><p class="k rv">Меню</p><h2 class="rv" style="--d:.1s">Выберите напиток</h2>
+<div class="tabs" role="tablist" id="tabs"></div>
+<div class="mg"><figure class="ph in" id="mph" style="--bgc:#ece3d3" role="img" aria-label="Место под фото напитка"><div class="z"></div><span id="mcap"></span></figure><div><div class="lst" id="ml"></div>
+<p class="dm">Демонстрационное меню: позиции, описания и цены будут заменены данными MOCO.</p></div></div></div></section>
+
+<section id="gallery"><div class="w"><p class="k rv">Галерея</p><h2 class="rv" style="--d:.1s">Атмосфера MOCO</h2>
+<div class="gl">
+<figure class="ph" style="--c:#7a5a45" role="img" aria-label="Место под фото: кофе"><div class="z"></div><span>кофе</span></figure>
+<figure class="ph" style="--c:#c9b79d;--d:.1s" role="img" aria-label="Место под фото: напитки"><div class="z"></div><span>напитки</span></figure>
+<figure class="ph" style="--c:#a98a6c;--d:.2s" role="img" aria-label="Место под фото: десерты"><div class="z"></div><span>десерты</span></figure>
+<figure class="ph" style="--c:#3b2a21;--d:.1s" role="img" aria-label="Место под фото: интерьер"><div class="z"></div><span style="color:#e8dfd0">интерьер</span></figure>
+<figure class="ph" style="--c:#d8ccb9;--d:.2s" role="img" aria-label="Место под фото: люди"><div class="z"></div><span>люди</span></figure>
+<figure class="ph" style="--c:#8f6f55;--d:.3s" role="img" aria-label="Место под фото: приготовление"><div class="z"></div><span>приготовление</span></figure></div></div></section>
+
+<section id="shops" style="background:var(--cream)"><div class="w"><p class="k rv">Наши кофейни</p><h2 class="rv" style="--d:.1s">Заходите в гости</h2>
+<div class="lc" id="lc"></div></div></section>
+</main>
+
+<footer id="contacts"><div class="w"><div class="fg">
+<div><p class="f" style="font-size:28px;max-width:11em">Specialty-кофе для городского ритма</p></div>
+<div><h4>Навигация</h4><ul><li><a href="#menu">Меню</a></li><li><a href="#about">О нас</a></li><li><a href="#shops">Кофейни</a></li></ul></div>
+<div><h4>Контакты</h4><ul><li>[телефон]</li><li>[e-mail]</li></ul></div>
+<div><h4>Соцсети</h4><ul><li>[Instagram]</li><li>[TikTok]</li></ul></div></div>
+<div class="fb" aria-hidden="true">MOCO</div>
+<div class="cp"><span>© 2026 MOCO</span><span>Демонстрационный сайт: тексты и данные будут заменены</span></div></div></footer>
+
+<script>
+/* ДАННЫЕ ДЛЯ ЗАМЕНЫ: меню, филиалы. Фото: добавьте data-src="путь" к элементу .ph, и картинка встанет на место */
+const MENU={
+ "Coffee":{c:"#8a6a52",i:[["Эспрессо"],["Американо"],["Капучино"],["Латте"],["Флэт уайт"]]},
+ "Signature":{c:"#b89b7c",i:[["Фирменный напиток 1"],["Фирменный напиток 2"],["Фирменный напиток 3"]]},
+ "Tea":{c:"#a98a6c",i:[["Чёрный чай"],["Зелёный чай"],["Травяной чай"]]},
+ "Desserts":{c:"#c9b79d",i:[["Десерт 1"],["Десерт 2"],["Десерт 3"]]},
+ "Food":{c:"#7a5a45",i:[["Завтрак"],["Сэндвич"],["Круассан"]]}};
+const SHOPS=[["Кофейня 1"],["Кофейня 2"],["Кофейня 3"]];
+const $=s=>document.querySelector(s);
+// hero wordmark
+$("#big").innerHTML=[..."MOCO"].map((l,i)=>`<span aria-hidden="true"><b style="animation-delay:${.15+i*.12}s">${l}</b></span>`).join("");
+// menu
+const tabs=$("#tabs"),ml=$("#ml"),mph=$("#mph"),cap=$("#mcap");
+function show(k,first){const d=MENU[k];const draw=()=>{ml.innerHTML=d.i.map((x,n)=>`<div class="it"><div><h3>${x[0]}</h3><p>[описание позиции]</p></div><b>[цена] ₸</b></div>`).join("");mph.style.setProperty("--c",d.c);cap.textContent=k.toLowerCase();ml.classList.remove("o")};
+ tabs.querySelectorAll("button").forEach(b=>b.setAttribute("aria-selected",b.dataset.k==k));
+ if(first)return draw();ml.classList.add("o");setTimeout(draw,300)}
+Object.keys(MENU).forEach(k=>{const b=document.createElement("button");b.textContent=k;b.dataset.k=k;b.setAttribute("role","tab");b.onclick=()=>show(k);tabs.appendChild(b)});
+show("Coffee",true);
+// locations
+$("#lc").innerHTML=SHOPS.map((s,i)=>`<div class="lr rv" style="--d:${i*.1}s"><h3>${s[0]}</h3><span>[адрес]</span><span>[график работы]</span><span>[телефон]</span><a href="#shops">Карта</a></div>`).join("");
+// photos
+document.querySelectorAll(".ph[data-src]").forEach(p=>{const im=new Image();im.src=p.dataset.src;im.alt="";im.loading="lazy";p.prepend(im)});
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll(".rv,.ph:not(.in)").forEach(e=>io.observe(e));
+// header, parallax, mobile nav
+const hd=$("#hd"),cup=$("#cup");let t=0;
+const reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
+addEventListener("scroll",()=>{if(t)return;t=requestAnimationFrame(()=>{t=0;const y=scrollY;hd.classList.toggle("s",y>innerHeight*.7);if(!reduce&&y<innerHeight)cup.style.transform=`translateY(${y*.12}px) rotate(${y*.03}deg)`})},{passive:true});
+const nv=$("#nv"),bg=$("#bg");bg.onclick=()=>{const o=nv.classList.toggle("o");bg.setAttribute("aria-expanded",o)};
+nv.querySelectorAll("a").forEach(a=>a.onclick=()=>{nv.classList.remove("o");bg.setAttribute("aria-expanded","false")});
+</script></body></html>
